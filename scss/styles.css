@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "Rage Italic";
+  src: url(../resources/fonts/rage-italic/RAGE.TTF);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url(../resources/fonts/segoe-ui/Segoe\ UI.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 20px;
+}
+
+body {
+  background-color: rgba(255, 236, 216, 0.3411764706);
+  color: rgb(11, 11, 11);
+  font-family: "Segoe UI", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgb(11, 11, 11);
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: #707070;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #fff3e0;
+  width: 100vw;
+  position: relative;
+}
+
+.pageHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+.pageHeader #site-search {
+  width: 20%;
+  padding: 0.75rem 1.8rem;
+  background-color: #ffffff;
+  font-size: 20px;
+  border: 1px solid #707070;
+  border-radius: 0;
+}
+.pageHeader i {
+  font-size: 1rem;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+}
+.pageHeader .logo-text {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.pageHeader .logo-text h1 {
+  font-family: "Rage Italic", sans-serif;
+}
+.pageHeader .log-in {
+  width: 20%;
+  display: flex;
+}
+.pageHeader .log-in p {
+  width: 50%;
+  text-align: center;
+  margin: 10px 0;
+}
+.pageHeader .log-in p:first-of-type {
+  border-right: 1px solid black;
+}
+.pageHeader .log-in p:last-of-type {
+  border-left: 1px solid black;
+}
+
+.nav-bar {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #707070;
+}
+.nav-bar .links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-button {
+  font-size: 20px;
+  padding: 0.75rem 0;
+  width: 245px;
+  border: 1px solid #707070;
+  border-radius: 0;
+}
+
+.banner {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.banner h1 {
+  color: rgb(244, 244, 244);
+  margin-bottom: 2rem;
+}
+
+.video-banner {
+  position: relative;
+}
+.video-banner .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.image-banner {
+  background: url(../resources/images/christmas-is-here.jpg) center/cover;
+}
+
+.product-listing {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+}
+.product-listing .listing-header {
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-listing .listing-header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product-card {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-card .image-box {
+  position: relative;
+  width: 15rem;
+  height: 20rem;
+  background-color: rgba(1, 1, 1, 0.5);
+  overflow: hidden;
+}
+.product-card .image-box img {
+  position: absolute;
+  top: 0;
+  width: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-card .image-button {
+  position: absolute;
+  top: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+  background-color: rgba(1, 1, 1, 0.5);
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+.product-card .image-button .button2 {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.product-card .image-button .button1,
+.product-card .image-button .button3 {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.product-card .product-name {
+  padding-top: 1rem;
+}
+.product-card .price {
+  padding: 1rem 0;
+}
+
+#product-image-1 {
+  left: -28px;
+}
+#product-image-3 {
+  left: -75px;
+}
+#product-image-4 {
+  left: -95px;
+}
+#product-image-6 {
+  left: -115px;
+}
+
+.my-story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 800px;
+  padding: 4rem 0;
+  margin: 6rem 0;
+}
+.my-story__video-container {
+  width: 50%;
+  height: auto;
+  max-height: 1010px;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.my-story__video-container video {
+  width: 100%;
+  height: auto;
+}
+.my-story__content {
+  width: 50%;
+  aspect-ratio: 4/5;
+  text-align: center;
+  padding: 1.5rem;
+}
+.my-story__content h2 {
+  margin: 2rem 0;
+}
+.my-story__content p {
+  margin-bottom: 1.5rem;
+}
+
+.footer__nav--section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 4rem;
+}
+.footer__nav--section h4 {
+  margin-bottom: 1.5rem;
+}
+.footer__nav--section ul {
+  list-style-type: none;
+}
+.footer__nav--section ul li {
+  margin-bottom: 1rem;
+}
+
+.footer__social-and-subscription {
+  width: 50%;
+}
+.footer__social-and-subscription .social-media {
+  display: flex;
+  justify-content: space-between;
+  max-width: 40%;
+  font-size: 2rem;
+}
+.footer__social-and-subscription form {
+  margin-bottom: 1rem;
+}
+.footer__social-and-subscription form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.footer__social-and-subscription form div {
+  position: relative;
+}
+.footer__social-and-subscription form div input[type=email] {
+  height: 2rem;
+  width: 290px;
+  padding: 0.25rem 0.25rem;
+  border: 1px solid #707070;
+  border-radius: 0;
+}
+.footer__social-and-subscription form div input[type=email]:focus {
+  outline: none;
+}
+.footer__social-and-subscription form div button {
+  position: absolute;
+  left: 289px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 2rem;
+  padding: 0 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #707070;
+  border-radius: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0 5.5rem 0;
+}
+.footer .footer__nav {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+.footer .footer__social-and-subscription {
+  padding-left: 4rem;
+}
+
+.copyright {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 1rem;
+}/*# sourceMappingURL=styles.css.map */

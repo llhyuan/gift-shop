@@ -1,0 +1,378 @@
+@font-face {
+  font-family: "Rage Italic";
+  src: url(../resources/fonts/rage-italic/RAGE.TTF);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url(../resources/fonts/segoe-ui/Segoe\ UI.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+$color_pageBackground: #ffecd857;
+$color_buttonBackground: #ffffff;
+$color_footerBackground: #fff3e0;
+$color_font: rgb(11, 11, 11);
+$color_font-reverse: rgb(244, 244, 244);
+$color_font-secondary: #707070;
+$color_border: #707070;
+$font_size--normal: 20px;
+$font_logo: "Rage Italic";
+$font_pageText: "Segoe UI";
+
+@mixin border($width: 1px, $style: solid, $color: #707070, $radius: 0) {
+  border: $width $style $color;
+  border-radius: $radius;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: $font_size--normal;
+}
+
+body {
+  background-color: $color_pageBackground;
+  color: $color_font;
+  font-family: $font_pageText, sans-serif;
+}
+h1 {
+  font-size: 2.5rem;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: $color_font;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: $color_font-secondary;
+  }
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: $color_footerBackground;
+  width: 100vw;
+  position: relative;
+}
+
+.pageHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0;
+
+  #site-search {
+    width: 20%;
+    padding: 0.75rem 1.8rem;
+    background-color: $color_buttonBackground;
+    font-size: $font_size--normal;
+    @include border();
+  }
+  i {
+    font-size: 1rem;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+  }
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    h1 {
+      font-family: $font_logo, sans-serif;
+    }
+  }
+
+  .log-in {
+    width: 20%;
+    display: flex;
+    p {
+      width: 50%;
+      text-align: center;
+      margin: 10px 0;
+
+      &:first-of-type {
+        border-right: 1px solid black;
+      }
+      &:last-of-type {
+        border-left: 1px solid black;
+      }
+    }
+  }
+}
+
+.nav-bar {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $color_border;
+
+  .links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.info-button {
+  font-size: $font_size--normal;
+  padding: 0.75rem 0;
+  width: 245px;
+  @include border();
+}
+
+.banner {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  h1 {
+    color: $color_font-reverse;
+    margin-bottom: 2rem;
+  }
+}
+
+.video-banner {
+  position: relative;
+
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+  }
+}
+
+.image-banner {
+  background: url(../resources/images/christmas-is-here.jpg) center/cover;
+}
+
+.product-listing {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+
+  .listing-header {
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product-card {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image-box {
+    position: relative;
+    width: 15rem;
+    height: calc((4 / 3) * 15rem);
+    background-color: rgba(1, 1, 1, 0.5);
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .image-button {
+    position: absolute;
+    top: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 5px 10px;
+    border-radius: 25px;
+
+    .button2 {
+      width: 20px;
+      height: 20px;
+      background-color: $color_buttonBackground;
+      border-radius: 50%;
+    }
+
+    .button1,
+    .button3 {
+      width: 15px;
+      height: 15px;
+      background-color: $color_buttonBackground;
+      border-radius: 50%;
+    }
+  }
+
+  .product-name {
+    padding-top: 1rem;
+  }
+  .price {
+    padding: 1rem 0;
+  }
+}
+
+#product-image {
+  &-1 {
+    left: -28px;
+  }
+  &-3 {
+    left: -75px;
+  }
+  &-4 {
+    left: -95px;
+  }
+  &-6 {
+    left: -115px;
+  }
+}
+
+.my-story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 800px;
+  padding: 4rem 0;
+  margin: 6rem 0;
+
+  &__video-container {
+    width: 50%;
+    height: auto;
+    max-height: 1010px;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    aspect-ratio: 4/5;
+    text-align: center;
+    padding: 1.5rem;
+
+    h2 {
+      margin: 2rem 0;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.footer__nav--section {
+  width: fit-content;
+  margin-right: 4rem;
+  h4 {
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.footer__social-and-subscription {
+  width: 50%;
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40%;
+    font-size: 2rem;
+  }
+  form {
+    margin-bottom: 1rem;
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    div {
+      position: relative;
+      input[type="email"] {
+        height: 2rem;
+        width: 290px;
+        padding: 0.25rem 0.25rem;
+        @include border();
+
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        position: absolute;
+        left: 289px;
+        width: fit-content;
+        height: 2rem;
+        padding: 0 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        @include border();
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0 5.5rem 0;
+
+  .footer__nav {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .footer__social-and-subscription {
+    padding-left: 4rem;
+  }
+}
+
+.copyright {
+  background-color: $color_buttonBackground;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+
+  position: absolute;
+  bottom: 1rem;
+}
